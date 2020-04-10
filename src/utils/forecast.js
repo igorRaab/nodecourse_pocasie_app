@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location!', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' Aktuálne je vonku ' + body.currently.temperature + ' stupňov. Pravdepodobnosť dažďa je ' + body.currently.precipProbability + ' %.')
+            callback(undefined, body.daily.data[0].summary + ' Aktuálne je vonku ' + body.currently.temperature + ' stupňov. Pravdepodobnosť dažďa je ' + body.currently.precipProbability + ' %. Vlhkosť vzduchu je ' + body.currently.humidity + ' %.')
         }
     })
 }
